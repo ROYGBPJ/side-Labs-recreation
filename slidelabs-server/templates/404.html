@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{% if error %}Something went wrong{% else %}Page not found{% endif %} - SlideLabs{% endblock %}
+{% block head %}<meta name="robots" content="noindex">{% endblock %}
+{% block main %}
+<section class="section"><div class="container narrow center">
+  <h1>{% if error %}Something went wrong{% else %}Page not found{% endif %}</h1>
+  <p class="lead">{% if error %}Please try again in a moment.{% else %}The page you're looking for doesn't exist or has moved.{% endif %}</p>
+  <a class="btn btn-primary" href="/">Back to home</a>
+</div></section>
+{% endblock %}

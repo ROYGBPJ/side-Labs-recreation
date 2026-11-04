@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: slidelabs
+    runtime: docker
+    plan: free
+    envVars:
+      - key: SITE_URL
+        value: https://slidelabs.onrender.com   # change to your real URL after deploy
