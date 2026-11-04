@@ -1,8 +1,0 @@
-Flask>=3.0
-gunicorn>=22.0
-requests>=2.31
-beautifulsoup4>=4.12
-yt-dlp>=2026.1.1
-PyMuPDF>=1.24
-python-pptx>=1.0
-itsdangerous>=2.1
