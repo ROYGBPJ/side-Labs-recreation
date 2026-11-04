@@ -3,8 +3,7 @@ services:
     name: slidelabs
     runtime: docker
     plan: free
-    rootDir: slidelabs-server
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: ./slidelabs-server/Dockerfile
     dockerContext: .
     envVars:
       - key: SITE_URL
