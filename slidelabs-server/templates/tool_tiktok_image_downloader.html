@@ -1,0 +1,26 @@
+{% extends "tool_base.html" %}
+{% block tool_form %}
+<form id="tool-form" novalidate>
+  {% if static_export %}
+  <label for="url">Product link, page source or image links</label>
+  <textarea id="url" name="url" rows="4" placeholder="Paste a TikTok Shop product link, or paste the page source / image links here" autocomplete="off" required></textarea>
+  {% else %}
+  <label for="url">TikTok Shop product link</label>
+  <input id="url" name="url" type="url" inputmode="url" placeholder="https://www.tiktok.com/... or https://vt.tiktok.com/..." autocomplete="off" required>
+  {% endif %}
+  <label class="check"><input type="checkbox" id="rights" required> I own these images or have permission to download them.</label>
+  <p class="alert" role="alert" id="error" hidden></p>
+  <button class="btn btn-primary btn-block" type="submit" id="submit">Find images</button>
+</form>
+{% endblock %}
+{% block tool_help %}
+{% if static_export %}
+<h2>How to download product images</h2>
+<ol><li>Paste the product link. If your browser can't read it (most sites block this), open the page, press Ctrl+U (Cmd+Option+U on Mac) to view the source, copy it all and paste it here instead.</li><li>Confirm you have the right to use the images and press Find images.</li><li>Download single images or select several and download them as one ZIP.</li></ol>
+<p>This offline edition runs in your browser. Zipping works only when the image host allows it; otherwise use each image's Download link.</p>
+{% else %}
+<h2>How to download product images</h2>
+<ol><li>Copy the product link from TikTok Shop (full URLs and vt.tiktok.com share links both work).</li><li>Paste it above and confirm you have the right to use the images.</li><li>Download single images or select several and download them as one ZIP.</li></ol>
+<p>Works on desktop and mobile. Images are fetched as published by the listing.</p>
+{% endif %}
+{% endblock %}

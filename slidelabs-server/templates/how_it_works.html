@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}How SlideLabs works - outcome-driven marketing workflows{% endblock %}
+{% block description %}See how SlideLabs turns a brief into campaign-ready output with repeatable workflows instead of blank prompt boxes.{% endblock %}
+{% block main %}
+<section class="page-head"><div class="container"><h1>How SlideLabs works</h1><p class="lead">Start from the outcome you need, not from an empty prompt box.</p></div></section>
+<section class="section"><div class="container narrow">
+  <ol class="steps">
+    <li><h2>Pick the outcome</h2><p>Choose what you need: a campaign kit, a set of visuals, a trend read, a creator shortlist, a content calendar or an adapted deck.</p></li>
+    <li><h2>Add your brief</h2><p>Share the product, client or creator brief and any references. The workflow asks only for what that outcome needs.</p></li>
+    <li><h2>Get structured output</h2><p>Receive campaign angles, messages, scripts, captions, visuals or shortlists in a ready-to-use structure.</p></li>
+    <li><h2>Repeat and adapt</h2><p>Reuse what worked across brands, markets and creator activations.</p></li>
+  </ol>
+  <h2>The workflows</h2>
+  <div class="grid grid-2">{% for name, desc in products %}<article class="card"><h3>{{ name }}</h3><p>{{ desc }}</p></article>{% endfor %}</div>
+  <p class="center"><a class="btn btn-primary" href="/tools/video-downloader">Try the free tools</a></p>
+</div></section>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">AI marketing workspace</p>
+    <h1>Outcome-driven marketing, without the blank canvas</h1>
+    <p class="lead">Replace scattered marketing tools with workflows for campaigns, content, visuals, trends and influencer marketing. No blank canvas. No prompt engineering.</p>
+    <div class="cta-row"><a class="btn btn-primary" href="/tools/video-downloader">Try the free tools</a><a class="btn btn-ghost" href="/how-it-works">See how it works</a></div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h2>One system for the whole campaign</h2>
+    <p class="section-sub">Built for marketing agencies, content creators and brand teams that need repeatable workflows instead of blank prompt boxes.</p>
+    <div class="grid grid-3">
+      {% for name, desc in products %}<article class="card"><h3>{{ name }}</h3><p>{{ desc }}</p></article>{% endfor %}
+    </div>
+  </div>
+</section>
+<section class="section alt">
+  <div class="container">
+    <h2>Free tools, no account required</h2>
+    <p class="section-sub">Quick utilities for creators and sellers. Use them for content you own or have permission to use.</p>
+    <div class="grid grid-3">
+      {% for t in tools %}<a class="card card-link" href="/tools/{{ t.slug }}"><h3>{{ t.name }}</h3><p>{{ t.short }}</p><span class="more">Open tool &rarr;</span></a>{% endfor %}
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h2>From the creator marketing blog</h2>
+    <p class="section-sub">Guides to KOL, KOC and UGC marketing.</p>
+    <div class="grid grid-3">
+      {% for p in latest %}<a class="card card-link" href="/en/blog/{{ p.slug }}"><h3>{{ p.title }}</h3><p>{{ p.description }}</p><span class="more">Read article &rarr;</span></a>{% endfor %}
+    </div>
+    <p class="center"><a class="btn btn-ghost" href="/en/blog">All articles</a></p>
+  </div>
+</section>
+{% endblock %}
